@@ -14,7 +14,7 @@ public:
     if(RX!=0) {
       return this->serial.begin(speed, SERIAL_8N1, RX, TX);
     }
-    else return this->serial.begin(speed)
+    else return this->serial.begin(speed);
   };
 
   boolean ready()
