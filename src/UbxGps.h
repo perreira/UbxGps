@@ -9,9 +9,12 @@ template <class T = HardwareSerial>
 class UbxGps
 {
 public:
-  void begin(long speed)
+  void begin(long speed, int RX = 0, int TX = 0)
   {
-    return this->serial.begin(speed);
+    if(RX!=0) {
+      return this->serial.begin(speed, SERIAL_8N1, RX, TX);
+    }
+    else return this->serial.begin(speed)
   };
 
   boolean ready()
