@@ -1,5 +1,7 @@
 # UbxGps
 
+Fork of the original library, modified to be able to remap HW serial pins for ESP32: added two optional parametes for RX/TX pin gps.begin(GPS_BAUDRATE,GPS_TX,GPS_RX);
+
 **This Arduino library was developed for the fastest and simplest communication with u-blox GPS modules**, which
 support proprietary UBX protocol that is binary and therefore more compact than common NMEA. Main idea was to achieve real 10 Hz from NEO-7M and it was done. Huge thanks to **iforce2d** for a [tutorial video](https://www.youtube.com/watch?v=TwhCX0c8Xe0) whose
 code is laid in the basics of the library.
